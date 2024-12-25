@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merry Christmas 2024!</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
+    <link rel="icon" href="download (1).jpeg" type="image/x-icon">
+    <style>
+        :root {
+            --christmas-red: #D42426;
+            --christmas-green: #165B33;
+            --snow-white: #FFFFFF;
+            --gold: #FFD700;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--christmas-red);
+            color: var(--snow-white);
+            overflow-x: hidden;
+        }
+
+        .snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        header {
+            background-color: var(--christmas-green);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel {
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .carousel-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .carousel-item img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 3px solid var(--gold);
+        }
+
+        .message {
+            background-color: var(--christmas-green);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .audio-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 3;
+            background: var(--christmas-green);
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--gold);
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--gold);
+            }
+        }
+
+        .slick-prev, .slick-next {
+            color: var(--gold) !important;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--snow-white);
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="snow"></div>
+    
+    <header>
+        <h1><span style="color: var(--christmas-red);">@Pin_chase</span></h1>
+        <h1>✨ Merry Christmas 2024! ✨</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="message">
+            <h2>Wishing You Joy and Peace</h2>
+            <p>May your holidays be filled with warmth, love, and magical moments!</p>
+        </div>
+
+        <div class="carousel" id="greetings-carousel">
+            <div class="carousel-item">
+                <img src="img_1.png" alt="Christmas Tree">
+                <h3>Season's Greetings</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="img_2.png" alt="Gift">
+                <h3>Happy Holidays</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="download.jpeg" alt="Santa">
+                <h3>Joy to the World</h3>
+            </div>
+        </div>
+
+        <div class="carousel" id="wishes-carousel">
+            <div class="carousel-item">
+                <h3>Peace on Earth</h3>
+                <p>May peace and harmony fill your life</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Spread Love</h3>
+                <p>Let's share the gift of love this season</p>
+            </div>
+            <div class="carousel-item">
+                <h3>Holiday Cheer</h3>
+                <p>Bringing warmth to every heart</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-controls" onclick="toggleMusic()">
+        <svg class="icon" id="music-icon" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+    </div>
+
+    <audio id="christmas-music" loop>
+        <source src="https://upload.wikimedia.org/wikipedia/commons/8/84/Jingle_Bells_%28the_original_1857_version%29.ogg" type="audio/ogg">
+    </audio>
+    <audio id="background-music" autoplay loop>
+        <source src="Jingle Bells Songs for Children.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <footer class="bg-dark text-white text-center py-3 center">
+        <p>&copy; 2024 @Pin_chase. All rights reserved.</p>
+        <p>Made with ❤️ by @Pin_chase</p>
+        <p>Wishing you a Merry Christmas and a Happy New Year!</p>
+        <p>Stay safe and celebrate responsibly!</p>
+        <p>Thank you for being part of my life!</p>
+        <p>From <a href="https://kagiri.netlify.app/"> @Pin_chase</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Initialize carousels
+        $(document).ready(function(){
+            $('#greetings-carousel, #wishes-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+
+        // Snow effect
+        function createSnowflakes() {
+            const snow = document.querySelector('.snow');
+            for (let i = 0; i < 50; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.style.position = 'absolute';
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.top = -10 + 'px';
+                snowflake.style.width = '10px';
+                snowflake.style.height = '10px';
+                snowflake.style.background = 'white';
+                snowflake.style.borderRadius = '50%';
+                snowflake.style.opacity = Math.random();
+                snow.appendChild(snowflake);
+                
+                animateSnowflake(snowflake);
+            }
+        }
+
+        function animateSnowflake(snowflake) {
+            const animation = snowflake.animate([
+                { transform: 'translate(0, 0)' },
+                { transform: `translate(${Math.random() * 200 - 100}px, ${window.innerHeight}px)` }
+            ], {
+                duration: Math.random() * 3000 + 2000,
+                iterations: Infinity
+            });
+        }
+
+        // Music controls
+        let isPlaying = false;
+        const audio = document.getElementById('christmas-music');
+        
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Initialize snow effect
+        createSnowflakes();
+    </script>
+</body>
+</html>
